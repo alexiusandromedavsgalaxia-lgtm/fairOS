@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Install FairOS
+Comment=Guided FairOS installation
+Exec=kgx --command=fairos-install
+Icon=system-software-install
+Terminal=false
+Type=Application
+Categories=System;Settings;
