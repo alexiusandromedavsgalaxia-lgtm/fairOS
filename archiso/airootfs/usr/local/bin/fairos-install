@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+echo "FairOS installer"
+echo "This starts the Arch Linux guided installer."
+echo "Select a disk of at least 30 GiB and install GNOME."
+echo "For UTM use 1280 MiB RAM, q35, UEFI and a virtio disk."
+exec archinstall
