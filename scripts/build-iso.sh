@@ -11,7 +11,7 @@ if ! command -v docker >/dev/null 2>&1; then
 fi
 
 docker run --rm --privileged   -e TZ=UTC   -v "$root_dir:/src"   archlinux:latest   bash -euo pipefail -c '
-    pacman -Syu --noconfirm --needed archiso rsync
+    pacman -Syu --noconfirm --needed archiso rsync grub syslinux
     mkdir -p /tmp/fairos-profile /tmp/fairos-work
     cp -a /usr/share/archiso/configs/releng/. /tmp/fairos-profile/
     cp /src/archiso/profiledef.sh /tmp/fairos-profile/profiledef.sh
