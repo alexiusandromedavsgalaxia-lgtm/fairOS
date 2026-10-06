@@ -1,0 +1,22 @@
+name: build-fairos-iso
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ISO
+        run: bash scripts/build-iso.sh
+      - name: Upload ISO
+        uses: actions/upload-artifact@v4
+        with:
+          name: fairos-iso
+          path: out/*.iso
+          if-no-files-found: error
+          retention-days: 14
