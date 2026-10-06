@@ -4,6 +4,7 @@ linux-firmware
 amd-ucode
 intel-ucode
 grub
+syslinux
 efibootmgr
 arch-install-scripts
 archinstall
