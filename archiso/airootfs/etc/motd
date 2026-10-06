@@ -1,0 +1,9 @@
+FairOS 1.0
+Arch Linux
+GNOME 50
+
+live user: fair
+password: fair
+
+install: fairos-install
+health: fair-health
