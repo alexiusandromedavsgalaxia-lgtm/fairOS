@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# FairOS ISO builder
 root_dir="$(cd "$(dirname "$0")/.." && pwd)"
 mkdir -p "$root_dir/out"
 
@@ -19,3 +20,5 @@ docker run --rm --privileged   -e TZ=UTC   -v "$root_dir:/src"   archlinux:lates
     cp -a /src/archiso/airootfs/. /tmp/fairos-profile/airootfs/
     mkarchiso -v -w /tmp/fairos-work -o /src/out /tmp/fairos-profile
   '
+
+find "$root_dir/out" -maxdepth 1 -name "*.iso" -print -quit | grep .
