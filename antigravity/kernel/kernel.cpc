@@ -1,0 +1,6 @@
+const kernel(kernel main init timestamp)
+let constant {{
+const main(stamp) {{
+.time?main(main)
+}}
+}}
